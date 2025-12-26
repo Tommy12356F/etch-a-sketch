@@ -13,7 +13,10 @@ for (let i = 0; i < 256; i++) {
 let reset = document.querySelector(".reset")
 reset.addEventListener("click",()=>{
     let size = prompt("Enter no: ")
-    
+    if (size>80){
+        alert("Enter Valid no")
+        return;
+    }
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
